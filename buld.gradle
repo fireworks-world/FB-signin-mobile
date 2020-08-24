@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+final ANDROIDX = '1.0.0'
+final BUTTERKNIFE = '10.1.0'
+android {
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.refknowledgebase.refknowledgebase"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+//bottom navigation bar
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:23.1.1'
+//circle image
+    implementation 'com.mikhaellopez:circularimageview:4.0.1'
+//map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+//circle seekbar
+    implementation 'me.tankery.lib:circularSeekBar:1.1.5'
+//google login
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+//    implementation 'com.github.GwonHyeok:StickySwitch:0.0.16'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+//permission get
+    implementation 'com.karumi:dexter:6.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.core:core-ktx:1.3.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    rounded image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.volley:volley:1.1.1'
+//    oAuth2
+    implementation 'ca.mimic:oauth2library:2.4.2'
+//    youtube play api
+    implementation 'com.google.apis:google-api-services-youtube:v3-rev183-1.22.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:22.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:22.2.0'
+//    FB login
+    // Don't forget to change the line below with the latest version of Parse SDK for Android
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.18.5"
+
+    // Don't forget to change the line below with the latest version of Parse Facebook Utils SDK for Android
+    implementation "com.github.parse-community:ParseFacebookUtils-Android:1.12.0"
+
+    implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
+
+
+    implementation 'com.facebook.android:facebook-login:4.42.0'
+
+    // location play services
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // dexter runtime permissions
+    implementation 'com.karumi:dexter:6.0.1'
+
+    // ButterKnife view binding
+    implementation 'com.facebook.fresco:fresco:1.10.0'
+
+    androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9'
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+//    round fb icon
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+}
